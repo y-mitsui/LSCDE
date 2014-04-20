@@ -1,0 +1,199 @@
+The system is: FreeBSD - 10.0-RELEASE - amd64
+Compiling the C compiler identification source file "CMakeCCompilerId.c" succeeded.
+Compiler: /usr/bin/cc 
+Build flags: 
+Id flags: 
+
+The output was:
+0
+
+
+Compilation of the C compiler identification source "CMakeCCompilerId.c" produced "a.out"
+
+The C compiler identification is Clang, found in "/root/githubProject/LSCDE/CMakeFiles/2.8.12.1/CompilerIdC/a.out"
+
+Compiling the CXX compiler identification source file "CMakeCXXCompilerId.cpp" succeeded.
+Compiler: /usr/bin/CC 
+Build flags: 
+Id flags: 
+
+The output was:
+0
+
+
+Compilation of the CXX compiler identification source "CMakeCXXCompilerId.cpp" produced "a.out"
+
+The CXX compiler identification is Clang, found in "/root/githubProject/LSCDE/CMakeFiles/2.8.12.1/CompilerIdCXX/a.out"
+
+Determining if the C compiler works passed with the following output:
+Change Dir: /root/githubProject/LSCDE/CMakeFiles/CMakeTmp
+
+Run Build Command:/usr/local/bin/gmake "cmTryCompileExec1513078576/fast"
+/usr/local/bin/gmake -f CMakeFiles/cmTryCompileExec1513078576.dir/build.make CMakeFiles/cmTryCompileExec1513078576.dir/build
+gmake[1]: ディレクトリ `/root/githubProject/LSCDE/CMakeFiles/CMakeTmp' に入ります
+/usr/local/bin/cmake -E cmake_progress_report /root/githubProject/LSCDE/CMakeFiles/CMakeTmp/CMakeFiles 1
+Building C object CMakeFiles/cmTryCompileExec1513078576.dir/testCCompiler.c.o
+/usr/bin/cc    -o CMakeFiles/cmTryCompileExec1513078576.dir/testCCompiler.c.o   -c /root/githubProject/LSCDE/CMakeFiles/CMakeTmp/testCCompiler.c
+Linking C executable cmTryCompileExec1513078576
+/usr/local/bin/cmake -E cmake_link_script CMakeFiles/cmTryCompileExec1513078576.dir/link.txt --verbose=1
+/usr/bin/cc       CMakeFiles/cmTryCompileExec1513078576.dir/testCCompiler.c.o  -o cmTryCompileExec1513078576  
+gmake[1]: ディレクトリ `/root/githubProject/LSCDE/CMakeFiles/CMakeTmp' から出ます
+
+
+Detecting C compiler ABI info compiled with the following output:
+Change Dir: /root/githubProject/LSCDE/CMakeFiles/CMakeTmp
+
+Run Build Command:/usr/local/bin/gmake "cmTryCompileExec1832267102/fast"
+/usr/local/bin/gmake -f CMakeFiles/cmTryCompileExec1832267102.dir/build.make CMakeFiles/cmTryCompileExec1832267102.dir/build
+gmake[1]: ディレクトリ `/root/githubProject/LSCDE/CMakeFiles/CMakeTmp' に入ります
+/usr/local/bin/cmake -E cmake_progress_report /root/githubProject/LSCDE/CMakeFiles/CMakeTmp/CMakeFiles 1
+Building C object CMakeFiles/cmTryCompileExec1832267102.dir/CMakeCCompilerABI.c.o
+/usr/bin/cc    -o CMakeFiles/cmTryCompileExec1832267102.dir/CMakeCCompilerABI.c.o   -c /usr/local/share/cmake/Modules/CMakeCCompilerABI.c
+Linking C executable cmTryCompileExec1832267102
+/usr/local/bin/cmake -E cmake_link_script CMakeFiles/cmTryCompileExec1832267102.dir/link.txt --verbose=1
+/usr/bin/cc     -v CMakeFiles/cmTryCompileExec1832267102.dir/CMakeCCompilerABI.c.o  -o cmTryCompileExec1832267102   
+FreeBSD clang version 3.3 (tags/RELEASE_33/final 183502) 20130610
+Target: x86_64-unknown-freebsd10.0
+Thread model: posix
+ "/usr/bin/ld" --eh-frame-hdr -dynamic-linker /libexec/ld-elf.so.1 --hash-style=both --enable-new-dtags -o cmTryCompileExec1832267102 /usr/lib/crt1.o /usr/lib/crti.o /usr/lib/crtbegin.o -L/usr/lib CMakeFiles/cmTryCompileExec1832267102.dir/CMakeCCompilerABI.c.o -lgcc --as-needed -lgcc_s --no-as-needed -lc -lgcc --as-needed -lgcc_s --no-as-needed /usr/lib/crtend.o /usr/lib/crtn.o
+gmake[1]: ディレクトリ `/root/githubProject/LSCDE/CMakeFiles/CMakeTmp' から出ます
+
+
+Parsed C implicit link information from above output:
+  link line regex: [^( *|.*[/\])(ld|([^/\]+-)?ld|collect2)[^/\]*( |$)]
+  ignore line: [Change Dir: /root/githubProject/LSCDE/CMakeFiles/CMakeTmp]
+  ignore line: []
+  ignore line: [Run Build Command:/usr/local/bin/gmake "cmTryCompileExec1832267102/fast"]
+  ignore line: [/usr/local/bin/gmake -f CMakeFiles/cmTryCompileExec1832267102.dir/build.make CMakeFiles/cmTryCompileExec1832267102.dir/build]
+  ignore line: [gmake[1]: ディレクトリ `/root/githubProject/LSCDE/CMakeFiles/CMakeTmp' に入ります]
+  ignore line: [/usr/local/bin/cmake -E cmake_progress_report /root/githubProject/LSCDE/CMakeFiles/CMakeTmp/CMakeFiles 1]
+  ignore line: [Building C object CMakeFiles/cmTryCompileExec1832267102.dir/CMakeCCompilerABI.c.o]
+  ignore line: [/usr/bin/cc    -o CMakeFiles/cmTryCompileExec1832267102.dir/CMakeCCompilerABI.c.o   -c /usr/local/share/cmake/Modules/CMakeCCompilerABI.c]
+  ignore line: [Linking C executable cmTryCompileExec1832267102]
+  ignore line: [/usr/local/bin/cmake -E cmake_link_script CMakeFiles/cmTryCompileExec1832267102.dir/link.txt --verbose=1]
+  ignore line: [/usr/bin/cc     -v CMakeFiles/cmTryCompileExec1832267102.dir/CMakeCCompilerABI.c.o  -o cmTryCompileExec1832267102   ]
+  ignore line: [FreeBSD clang version 3.3 (tags/RELEASE_33/final 183502) 20130610]
+  ignore line: [Target: x86_64-unknown-freebsd10.0]
+  ignore line: [Thread model: posix]
+  link line: [ "/usr/bin/ld" --eh-frame-hdr -dynamic-linker /libexec/ld-elf.so.1 --hash-style=both --enable-new-dtags -o cmTryCompileExec1832267102 /usr/lib/crt1.o /usr/lib/crti.o /usr/lib/crtbegin.o -L/usr/lib CMakeFiles/cmTryCompileExec1832267102.dir/CMakeCCompilerABI.c.o -lgcc --as-needed -lgcc_s --no-as-needed -lc -lgcc --as-needed -lgcc_s --no-as-needed /usr/lib/crtend.o /usr/lib/crtn.o]
+    arg [/usr/bin/ld] ==> ignore
+    arg [--eh-frame-hdr] ==> ignore
+    arg [-dynamic-linker] ==> ignore
+    arg [/libexec/ld-elf.so.1] ==> ignore
+    arg [--hash-style=both] ==> ignore
+    arg [--enable-new-dtags] ==> ignore
+    arg [-o] ==> ignore
+    arg [cmTryCompileExec1832267102] ==> ignore
+    arg [/usr/lib/crt1.o] ==> ignore
+    arg [/usr/lib/crti.o] ==> ignore
+    arg [/usr/lib/crtbegin.o] ==> ignore
+    arg [-L/usr/lib] ==> dir [/usr/lib]
+    arg [CMakeFiles/cmTryCompileExec1832267102.dir/CMakeCCompilerABI.c.o] ==> ignore
+    arg [-lgcc] ==> lib [gcc]
+    arg [--as-needed] ==> ignore
+    arg [-lgcc_s] ==> lib [gcc_s]
+    arg [--no-as-needed] ==> ignore
+    arg [-lc] ==> lib [c]
+    arg [-lgcc] ==> lib [gcc]
+    arg [--as-needed] ==> ignore
+    arg [-lgcc_s] ==> lib [gcc_s]
+    arg [--no-as-needed] ==> ignore
+    arg [/usr/lib/crtend.o] ==> ignore
+    arg [/usr/lib/crtn.o] ==> ignore
+  remove lib [gcc]
+  remove lib [gcc_s]
+  remove lib [gcc]
+  remove lib [gcc_s]
+  collapse library dir [/usr/lib] ==> [/usr/lib]
+  implicit libs: [c]
+  implicit dirs: [/usr/lib]
+  implicit fwks: []
+
+
+Determining if the CXX compiler works passed with the following output:
+Change Dir: /root/githubProject/LSCDE/CMakeFiles/CMakeTmp
+
+Run Build Command:/usr/local/bin/gmake "cmTryCompileExec2990010740/fast"
+/usr/local/bin/gmake -f CMakeFiles/cmTryCompileExec2990010740.dir/build.make CMakeFiles/cmTryCompileExec2990010740.dir/build
+gmake[1]: ディレクトリ `/root/githubProject/LSCDE/CMakeFiles/CMakeTmp' に入ります
+/usr/local/bin/cmake -E cmake_progress_report /root/githubProject/LSCDE/CMakeFiles/CMakeTmp/CMakeFiles 1
+Building CXX object CMakeFiles/cmTryCompileExec2990010740.dir/testCXXCompiler.cxx.o
+/usr/bin/CC     -o CMakeFiles/cmTryCompileExec2990010740.dir/testCXXCompiler.cxx.o -c /root/githubProject/LSCDE/CMakeFiles/CMakeTmp/testCXXCompiler.cxx
+Linking CXX executable cmTryCompileExec2990010740
+/usr/local/bin/cmake -E cmake_link_script CMakeFiles/cmTryCompileExec2990010740.dir/link.txt --verbose=1
+/usr/bin/CC        CMakeFiles/cmTryCompileExec2990010740.dir/testCXXCompiler.cxx.o  -o cmTryCompileExec2990010740  
+gmake[1]: ディレクトリ `/root/githubProject/LSCDE/CMakeFiles/CMakeTmp' から出ます
+
+
+Detecting CXX compiler ABI info compiled with the following output:
+Change Dir: /root/githubProject/LSCDE/CMakeFiles/CMakeTmp
+
+Run Build Command:/usr/local/bin/gmake "cmTryCompileExec1536921737/fast"
+/usr/local/bin/gmake -f CMakeFiles/cmTryCompileExec1536921737.dir/build.make CMakeFiles/cmTryCompileExec1536921737.dir/build
+gmake[1]: ディレクトリ `/root/githubProject/LSCDE/CMakeFiles/CMakeTmp' に入ります
+/usr/local/bin/cmake -E cmake_progress_report /root/githubProject/LSCDE/CMakeFiles/CMakeTmp/CMakeFiles 1
+Building CXX object CMakeFiles/cmTryCompileExec1536921737.dir/CMakeCXXCompilerABI.cpp.o
+/usr/bin/CC     -o CMakeFiles/cmTryCompileExec1536921737.dir/CMakeCXXCompilerABI.cpp.o -c /usr/local/share/cmake/Modules/CMakeCXXCompilerABI.cpp
+Linking CXX executable cmTryCompileExec1536921737
+/usr/local/bin/cmake -E cmake_link_script CMakeFiles/cmTryCompileExec1536921737.dir/link.txt --verbose=1
+/usr/bin/CC      -v CMakeFiles/cmTryCompileExec1536921737.dir/CMakeCXXCompilerABI.cpp.o  -o cmTryCompileExec1536921737   
+FreeBSD clang version 3.3 (tags/RELEASE_33/final 183502) 20130610
+Target: x86_64-unknown-freebsd10.0
+Thread model: posix
+ "/usr/bin/ld" --eh-frame-hdr -dynamic-linker /libexec/ld-elf.so.1 --hash-style=both --enable-new-dtags -o cmTryCompileExec1536921737 /usr/lib/crt1.o /usr/lib/crti.o /usr/lib/crtbegin.o -L/usr/lib CMakeFiles/cmTryCompileExec1536921737.dir/CMakeCXXCompilerABI.cpp.o -lc++ -lm -lgcc --as-needed -lgcc_s --no-as-needed -lc -lgcc --as-needed -lgcc_s --no-as-needed /usr/lib/crtend.o /usr/lib/crtn.o
+gmake[1]: ディレクトリ `/root/githubProject/LSCDE/CMakeFiles/CMakeTmp' から出ます
+
+
+Parsed CXX implicit link information from above output:
+  link line regex: [^( *|.*[/\])(ld|([^/\]+-)?ld|collect2)[^/\]*( |$)]
+  ignore line: [Change Dir: /root/githubProject/LSCDE/CMakeFiles/CMakeTmp]
+  ignore line: []
+  ignore line: [Run Build Command:/usr/local/bin/gmake "cmTryCompileExec1536921737/fast"]
+  ignore line: [/usr/local/bin/gmake -f CMakeFiles/cmTryCompileExec1536921737.dir/build.make CMakeFiles/cmTryCompileExec1536921737.dir/build]
+  ignore line: [gmake[1]: ディレクトリ `/root/githubProject/LSCDE/CMakeFiles/CMakeTmp' に入ります]
+  ignore line: [/usr/local/bin/cmake -E cmake_progress_report /root/githubProject/LSCDE/CMakeFiles/CMakeTmp/CMakeFiles 1]
+  ignore line: [Building CXX object CMakeFiles/cmTryCompileExec1536921737.dir/CMakeCXXCompilerABI.cpp.o]
+  ignore line: [/usr/bin/CC     -o CMakeFiles/cmTryCompileExec1536921737.dir/CMakeCXXCompilerABI.cpp.o -c /usr/local/share/cmake/Modules/CMakeCXXCompilerABI.cpp]
+  ignore line: [Linking CXX executable cmTryCompileExec1536921737]
+  ignore line: [/usr/local/bin/cmake -E cmake_link_script CMakeFiles/cmTryCompileExec1536921737.dir/link.txt --verbose=1]
+  ignore line: [/usr/bin/CC      -v CMakeFiles/cmTryCompileExec1536921737.dir/CMakeCXXCompilerABI.cpp.o  -o cmTryCompileExec1536921737   ]
+  ignore line: [FreeBSD clang version 3.3 (tags/RELEASE_33/final 183502) 20130610]
+  ignore line: [Target: x86_64-unknown-freebsd10.0]
+  ignore line: [Thread model: posix]
+  link line: [ "/usr/bin/ld" --eh-frame-hdr -dynamic-linker /libexec/ld-elf.so.1 --hash-style=both --enable-new-dtags -o cmTryCompileExec1536921737 /usr/lib/crt1.o /usr/lib/crti.o /usr/lib/crtbegin.o -L/usr/lib CMakeFiles/cmTryCompileExec1536921737.dir/CMakeCXXCompilerABI.cpp.o -lc++ -lm -lgcc --as-needed -lgcc_s --no-as-needed -lc -lgcc --as-needed -lgcc_s --no-as-needed /usr/lib/crtend.o /usr/lib/crtn.o]
+    arg [/usr/bin/ld] ==> ignore
+    arg [--eh-frame-hdr] ==> ignore
+    arg [-dynamic-linker] ==> ignore
+    arg [/libexec/ld-elf.so.1] ==> ignore
+    arg [--hash-style=both] ==> ignore
+    arg [--enable-new-dtags] ==> ignore
+    arg [-o] ==> ignore
+    arg [cmTryCompileExec1536921737] ==> ignore
+    arg [/usr/lib/crt1.o] ==> ignore
+    arg [/usr/lib/crti.o] ==> ignore
+    arg [/usr/lib/crtbegin.o] ==> ignore
+    arg [-L/usr/lib] ==> dir [/usr/lib]
+    arg [CMakeFiles/cmTryCompileExec1536921737.dir/CMakeCXXCompilerABI.cpp.o] ==> ignore
+    arg [-lc++] ==> lib [c++]
+    arg [-lm] ==> lib [m]
+    arg [-lgcc] ==> lib [gcc]
+    arg [--as-needed] ==> ignore
+    arg [-lgcc_s] ==> lib [gcc_s]
+    arg [--no-as-needed] ==> ignore
+    arg [-lc] ==> lib [c]
+    arg [-lgcc] ==> lib [gcc]
+    arg [--as-needed] ==> ignore
+    arg [-lgcc_s] ==> lib [gcc_s]
+    arg [--no-as-needed] ==> ignore
+    arg [/usr/lib/crtend.o] ==> ignore
+    arg [/usr/lib/crtn.o] ==> ignore
+  remove lib [gcc]
+  remove lib [gcc_s]
+  remove lib [gcc]
+  remove lib [gcc_s]
+  collapse library dir [/usr/lib] ==> [/usr/lib]
+  implicit libs: [c++;m;c]
+  implicit dirs: [/usr/lib]
+  implicit fwks: []
+
+

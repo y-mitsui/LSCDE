@@ -1,0 +1,2 @@
+/usr/bin/ar cr liblscde.a  CMakeFiles/lscde.dir/LSCDE.c.o
+/usr/bin/ranlib liblscde.a

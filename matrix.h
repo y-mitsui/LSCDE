@@ -1,0 +1,11 @@
+void matrixMatrixMul(double *result,double *matA,double *matB,int aCol,int aRow,int bCol,int bRow);
+void matrixMatrixAdd(double *result,double *matA,double *matB,int col,int row);
+void vectorScalerMul(double *result,double *matA,double scal,int col,int row);
+void matrixScalerDiv(double *result,double *matA,double scal,int col,int row);
+void matrixInverse(double *result,double *matA,int col,int row);
+void vectorVectorMul(double *result,double *vecA,double *vecB,int dimention);
+void vectorVectorAdd(double *result,double *vecA,double *vecB,int dimention);
+void vectorScalerDiv(double *result,double *vecA,double scal,int dimention);
+void matrixScalerAdd(double *result,double *matA,double scaler,int col,int row);
+void matrixVectorMul(double *result,double *matA,double *matB,int aCol,int aRow,int bDim);
+void matrixScalerMul(double *result,double *matA,double scal,int col,int row);

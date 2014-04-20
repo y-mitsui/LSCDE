@@ -1,0 +1,1 @@
+/usr/bin/cc  -Wall -g    CMakeFiles/conditionalProbability.dir/LSCDE.c.o  -o conditionalProbability  -lm -lmeschach 

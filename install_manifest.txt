@@ -1,0 +1,2 @@
+/usr/local/lib/liblscde.a
+/usr/local/include/lscde.h

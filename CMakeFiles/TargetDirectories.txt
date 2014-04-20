@@ -1,0 +1,2 @@
+/root/githubProject/LSCDE/CMakeFiles/conditionalProbability.dir
+/root/githubProject/LSCDE/CMakeFiles/lscde.dir
