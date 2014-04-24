@@ -4,10 +4,11 @@ project (LSCDE)
 
 SET(CMAKE_C_FLAGS "-Wall -g")
 
-ADD_LIBRARY(lscde STATIC LSCDE.c)
+ADD_LIBRARY(lscde STATIC lscde.c)
+target_link_libraries(lscde m meschach)
 
-add_executable (conditionalProbability LSCDE.c)
-target_link_libraries(conditionalProbability m meschach)
+add_executable (conditionalProbability conditionalProbability.c)
+target_link_libraries(conditionalProbability m lscde)
 
 # 共有ライブラリのインストール指定
 INSTALL(TARGETS lscde ARCHIVE DESTINATION lib)

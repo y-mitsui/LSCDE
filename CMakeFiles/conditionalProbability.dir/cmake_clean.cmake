@@ -1,5 +1,5 @@
 FILE(REMOVE_RECURSE
-  "CMakeFiles/conditionalProbability.dir/LSCDE.c.o"
+  "CMakeFiles/conditionalProbability.dir/conditionalProbability.c.o"
   "conditionalProbability.pdb"
   "conditionalProbability"
 )

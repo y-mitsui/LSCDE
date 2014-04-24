@@ -1,5 +1,5 @@
 FILE(REMOVE_RECURSE
-  "CMakeFiles/lscde.dir/LSCDE.c.o"
+  "CMakeFiles/lscde.dir/lscde.c.o"
   "liblscde.pdb"
   "liblscde.a"
 )

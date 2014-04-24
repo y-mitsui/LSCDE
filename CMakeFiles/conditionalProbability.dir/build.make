@@ -52,38 +52,39 @@ include CMakeFiles/conditionalProbability.dir/progress.make
 # Include the compile flags for this target's objects.
 include CMakeFiles/conditionalProbability.dir/flags.make
 
-CMakeFiles/conditionalProbability.dir/LSCDE.c.o: CMakeFiles/conditionalProbability.dir/flags.make
-CMakeFiles/conditionalProbability.dir/LSCDE.c.o: LSCDE.c
+CMakeFiles/conditionalProbability.dir/conditionalProbability.c.o: CMakeFiles/conditionalProbability.dir/flags.make
+CMakeFiles/conditionalProbability.dir/conditionalProbability.c.o: conditionalProbability.c
 	$(CMAKE_COMMAND) -E cmake_progress_report /root/githubProject/LSCDE/CMakeFiles $(CMAKE_PROGRESS_1)
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Building C object CMakeFiles/conditionalProbability.dir/LSCDE.c.o"
-	/usr/bin/cc  $(C_DEFINES) $(C_FLAGS) -o CMakeFiles/conditionalProbability.dir/LSCDE.c.o   -c /root/githubProject/LSCDE/LSCDE.c
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Building C object CMakeFiles/conditionalProbability.dir/conditionalProbability.c.o"
+	/usr/bin/cc  $(C_DEFINES) $(C_FLAGS) -o CMakeFiles/conditionalProbability.dir/conditionalProbability.c.o   -c /root/githubProject/LSCDE/conditionalProbability.c
 
-CMakeFiles/conditionalProbability.dir/LSCDE.c.i: cmake_force
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing C source to CMakeFiles/conditionalProbability.dir/LSCDE.c.i"
-	/usr/bin/cc  $(C_DEFINES) $(C_FLAGS) -E /root/githubProject/LSCDE/LSCDE.c > CMakeFiles/conditionalProbability.dir/LSCDE.c.i
+CMakeFiles/conditionalProbability.dir/conditionalProbability.c.i: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing C source to CMakeFiles/conditionalProbability.dir/conditionalProbability.c.i"
+	/usr/bin/cc  $(C_DEFINES) $(C_FLAGS) -E /root/githubProject/LSCDE/conditionalProbability.c > CMakeFiles/conditionalProbability.dir/conditionalProbability.c.i
 
-CMakeFiles/conditionalProbability.dir/LSCDE.c.s: cmake_force
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling C source to assembly CMakeFiles/conditionalProbability.dir/LSCDE.c.s"
-	/usr/bin/cc  $(C_DEFINES) $(C_FLAGS) -S /root/githubProject/LSCDE/LSCDE.c -o CMakeFiles/conditionalProbability.dir/LSCDE.c.s
+CMakeFiles/conditionalProbability.dir/conditionalProbability.c.s: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling C source to assembly CMakeFiles/conditionalProbability.dir/conditionalProbability.c.s"
+	/usr/bin/cc  $(C_DEFINES) $(C_FLAGS) -S /root/githubProject/LSCDE/conditionalProbability.c -o CMakeFiles/conditionalProbability.dir/conditionalProbability.c.s
 
-CMakeFiles/conditionalProbability.dir/LSCDE.c.o.requires:
-.PHONY : CMakeFiles/conditionalProbability.dir/LSCDE.c.o.requires
+CMakeFiles/conditionalProbability.dir/conditionalProbability.c.o.requires:
+.PHONY : CMakeFiles/conditionalProbability.dir/conditionalProbability.c.o.requires
 
-CMakeFiles/conditionalProbability.dir/LSCDE.c.o.provides: CMakeFiles/conditionalProbability.dir/LSCDE.c.o.requires
-	$(MAKE) -f CMakeFiles/conditionalProbability.dir/build.make CMakeFiles/conditionalProbability.dir/LSCDE.c.o.provides.build
-.PHONY : CMakeFiles/conditionalProbability.dir/LSCDE.c.o.provides
+CMakeFiles/conditionalProbability.dir/conditionalProbability.c.o.provides: CMakeFiles/conditionalProbability.dir/conditionalProbability.c.o.requires
+	$(MAKE) -f CMakeFiles/conditionalProbability.dir/build.make CMakeFiles/conditionalProbability.dir/conditionalProbability.c.o.provides.build
+.PHONY : CMakeFiles/conditionalProbability.dir/conditionalProbability.c.o.provides
 
-CMakeFiles/conditionalProbability.dir/LSCDE.c.o.provides.build: CMakeFiles/conditionalProbability.dir/LSCDE.c.o
+CMakeFiles/conditionalProbability.dir/conditionalProbability.c.o.provides.build: CMakeFiles/conditionalProbability.dir/conditionalProbability.c.o
 
 # Object files for target conditionalProbability
 conditionalProbability_OBJECTS = \
-"CMakeFiles/conditionalProbability.dir/LSCDE.c.o"
+"CMakeFiles/conditionalProbability.dir/conditionalProbability.c.o"
 
 # External object files for target conditionalProbability
 conditionalProbability_EXTERNAL_OBJECTS =
 
-conditionalProbability: CMakeFiles/conditionalProbability.dir/LSCDE.c.o
+conditionalProbability: CMakeFiles/conditionalProbability.dir/conditionalProbability.c.o
 conditionalProbability: CMakeFiles/conditionalProbability.dir/build.make
+conditionalProbability: liblscde.a
 conditionalProbability: CMakeFiles/conditionalProbability.dir/link.txt
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --red --bold "Linking C executable conditionalProbability"
 	$(CMAKE_COMMAND) -E cmake_link_script CMakeFiles/conditionalProbability.dir/link.txt --verbose=$(VERBOSE)
@@ -92,7 +93,7 @@ conditionalProbability: CMakeFiles/conditionalProbability.dir/link.txt
 CMakeFiles/conditionalProbability.dir/build: conditionalProbability
 .PHONY : CMakeFiles/conditionalProbability.dir/build
 
-CMakeFiles/conditionalProbability.dir/requires: CMakeFiles/conditionalProbability.dir/LSCDE.c.o.requires
+CMakeFiles/conditionalProbability.dir/requires: CMakeFiles/conditionalProbability.dir/conditionalProbability.c.o.requires
 .PHONY : CMakeFiles/conditionalProbability.dir/requires
 
 CMakeFiles/conditionalProbability.dir/clean:

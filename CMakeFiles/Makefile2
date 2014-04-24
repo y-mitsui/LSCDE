@@ -59,7 +59,7 @@ CMAKE_BINARY_DIR = /root/githubProject/LSCDE
 # Target rules for target CMakeFiles/conditionalProbability.dir
 
 # All Build rule for target.
-CMakeFiles/conditionalProbability.dir/all:
+CMakeFiles/conditionalProbability.dir/all: CMakeFiles/lscde.dir/all
 	$(MAKE) -f CMakeFiles/conditionalProbability.dir/build.make CMakeFiles/conditionalProbability.dir/depend
 	$(MAKE) -f CMakeFiles/conditionalProbability.dir/build.make CMakeFiles/conditionalProbability.dir/build
 	$(CMAKE_COMMAND) -E cmake_progress_report /root/githubProject/LSCDE/CMakeFiles  1
@@ -72,7 +72,7 @@ all: CMakeFiles/conditionalProbability.dir/all
 
 # Build rule for subdir invocation for target.
 CMakeFiles/conditionalProbability.dir/rule: cmake_check_build_system
-	$(CMAKE_COMMAND) -E cmake_progress_start /root/githubProject/LSCDE/CMakeFiles 1
+	$(CMAKE_COMMAND) -E cmake_progress_start /root/githubProject/LSCDE/CMakeFiles 2
 	$(MAKE) -f CMakeFiles/Makefile2 CMakeFiles/conditionalProbability.dir/all
 	$(CMAKE_COMMAND) -E cmake_progress_start /root/githubProject/LSCDE/CMakeFiles 0
 .PHONY : CMakeFiles/conditionalProbability.dir/rule

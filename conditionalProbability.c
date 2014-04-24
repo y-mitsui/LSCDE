@@ -2,13 +2,27 @@
 #include <stdlib.h>
 #include <math.h>
 #include "matrix.h"
-#include "mystring.h"
 #include "mesch12b/matrix.h"
 #include "mesch12b/matrix2.h"
 #include "lscde.h"
 
 #define Malloc(type,n) (type *)malloc((n)*sizeof(type))
 #define Calloc(type,n) (type *)calloc(1,(n)*sizeof(type))
+
+#define NUM_NODE 2
+#define NUM_SAMPLE 500
+#define NUM_TEST 11
+
+void setSample(double *xSample,double *ySample,int numSample){
+	int i;
+
+	for(i=0;i<numSample;i++){
+		xSample[i]=(double)(rand()%4);
+		if(xSample[i]<2) ySample[i]=(rand()%100 < 80) ? xSample[i] : (double)(rand()%4);
+		else ySample[i]=(double)(rand()%4);
+	}
+}
+
 
 int main(void){
 	FILE *fp;

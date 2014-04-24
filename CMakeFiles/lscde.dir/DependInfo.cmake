@@ -4,7 +4,7 @@ SET(CMAKE_DEPENDS_LANGUAGES
   )
 # The set of files for implicit dependencies of each language:
 SET(CMAKE_DEPENDS_CHECK_C
-  "/root/githubProject/LSCDE/LSCDE.c" "/root/githubProject/LSCDE/CMakeFiles/lscde.dir/LSCDE.c.o"
+  "/root/githubProject/LSCDE/lscde.c" "/root/githubProject/LSCDE/CMakeFiles/lscde.dir/lscde.c.o"
   )
 SET(CMAKE_C_COMPILER_ID "Clang")
 

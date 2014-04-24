@@ -279,16 +279,4 @@ MAT* lscdeConditionalDensity(lscde *model,double *X,double *Y,int numTest){
 	m_free(tmpB);
 	return ph;
 }
-void setSample(double *xSample,double *ySample,int numSample){
-	int i;
-
-	for(i=0;i<numSample;i++){
-		xSample[i]=(double)(rand()%4);
-		if(xSample[i]<2) ySample[i]=(rand()%100 < 80) ? xSample[i] : (double)(rand()%4);
-		else ySample[i]=(double)(rand()%4);
-	}
-}
-#define NUM_NODE 2
-#define NUM_SAMPLE 500
-#define NUM_TEST 11
 

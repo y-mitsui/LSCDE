@@ -52,37 +52,37 @@ include CMakeFiles/lscde.dir/progress.make
 # Include the compile flags for this target's objects.
 include CMakeFiles/lscde.dir/flags.make
 
-CMakeFiles/lscde.dir/LSCDE.c.o: CMakeFiles/lscde.dir/flags.make
-CMakeFiles/lscde.dir/LSCDE.c.o: LSCDE.c
+CMakeFiles/lscde.dir/lscde.c.o: CMakeFiles/lscde.dir/flags.make
+CMakeFiles/lscde.dir/lscde.c.o: lscde.c
 	$(CMAKE_COMMAND) -E cmake_progress_report /root/githubProject/LSCDE/CMakeFiles $(CMAKE_PROGRESS_1)
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Building C object CMakeFiles/lscde.dir/LSCDE.c.o"
-	/usr/bin/cc  $(C_DEFINES) $(C_FLAGS) -o CMakeFiles/lscde.dir/LSCDE.c.o   -c /root/githubProject/LSCDE/LSCDE.c
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Building C object CMakeFiles/lscde.dir/lscde.c.o"
+	/usr/bin/cc  $(C_DEFINES) $(C_FLAGS) -o CMakeFiles/lscde.dir/lscde.c.o   -c /root/githubProject/LSCDE/lscde.c
 
-CMakeFiles/lscde.dir/LSCDE.c.i: cmake_force
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing C source to CMakeFiles/lscde.dir/LSCDE.c.i"
-	/usr/bin/cc  $(C_DEFINES) $(C_FLAGS) -E /root/githubProject/LSCDE/LSCDE.c > CMakeFiles/lscde.dir/LSCDE.c.i
+CMakeFiles/lscde.dir/lscde.c.i: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing C source to CMakeFiles/lscde.dir/lscde.c.i"
+	/usr/bin/cc  $(C_DEFINES) $(C_FLAGS) -E /root/githubProject/LSCDE/lscde.c > CMakeFiles/lscde.dir/lscde.c.i
 
-CMakeFiles/lscde.dir/LSCDE.c.s: cmake_force
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling C source to assembly CMakeFiles/lscde.dir/LSCDE.c.s"
-	/usr/bin/cc  $(C_DEFINES) $(C_FLAGS) -S /root/githubProject/LSCDE/LSCDE.c -o CMakeFiles/lscde.dir/LSCDE.c.s
+CMakeFiles/lscde.dir/lscde.c.s: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling C source to assembly CMakeFiles/lscde.dir/lscde.c.s"
+	/usr/bin/cc  $(C_DEFINES) $(C_FLAGS) -S /root/githubProject/LSCDE/lscde.c -o CMakeFiles/lscde.dir/lscde.c.s
 
-CMakeFiles/lscde.dir/LSCDE.c.o.requires:
-.PHONY : CMakeFiles/lscde.dir/LSCDE.c.o.requires
+CMakeFiles/lscde.dir/lscde.c.o.requires:
+.PHONY : CMakeFiles/lscde.dir/lscde.c.o.requires
 
-CMakeFiles/lscde.dir/LSCDE.c.o.provides: CMakeFiles/lscde.dir/LSCDE.c.o.requires
-	$(MAKE) -f CMakeFiles/lscde.dir/build.make CMakeFiles/lscde.dir/LSCDE.c.o.provides.build
-.PHONY : CMakeFiles/lscde.dir/LSCDE.c.o.provides
+CMakeFiles/lscde.dir/lscde.c.o.provides: CMakeFiles/lscde.dir/lscde.c.o.requires
+	$(MAKE) -f CMakeFiles/lscde.dir/build.make CMakeFiles/lscde.dir/lscde.c.o.provides.build
+.PHONY : CMakeFiles/lscde.dir/lscde.c.o.provides
 
-CMakeFiles/lscde.dir/LSCDE.c.o.provides.build: CMakeFiles/lscde.dir/LSCDE.c.o
+CMakeFiles/lscde.dir/lscde.c.o.provides.build: CMakeFiles/lscde.dir/lscde.c.o
 
 # Object files for target lscde
 lscde_OBJECTS = \
-"CMakeFiles/lscde.dir/LSCDE.c.o"
+"CMakeFiles/lscde.dir/lscde.c.o"
 
 # External object files for target lscde
 lscde_EXTERNAL_OBJECTS =
 
-liblscde.a: CMakeFiles/lscde.dir/LSCDE.c.o
+liblscde.a: CMakeFiles/lscde.dir/lscde.c.o
 liblscde.a: CMakeFiles/lscde.dir/build.make
 liblscde.a: CMakeFiles/lscde.dir/link.txt
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --red --bold "Linking C static library liblscde.a"
@@ -93,7 +93,7 @@ liblscde.a: CMakeFiles/lscde.dir/link.txt
 CMakeFiles/lscde.dir/build: liblscde.a
 .PHONY : CMakeFiles/lscde.dir/build
 
-CMakeFiles/lscde.dir/requires: CMakeFiles/lscde.dir/LSCDE.c.o.requires
+CMakeFiles/lscde.dir/requires: CMakeFiles/lscde.dir/lscde.c.o.requires
 .PHONY : CMakeFiles/lscde.dir/requires
 
 CMakeFiles/lscde.dir/clean:

@@ -6,7 +6,7 @@
 
 #IncludeRegexTransform: 
 
-/root/githubProject/LSCDE/LSCDE.c
+/root/githubProject/LSCDE/conditionalProbability.c
 stdio.h
 -
 stdlib.h
@@ -20,6 +20,8 @@ mesch12b/matrix.h
 mesch12b/matrix2.h
 /root/githubProject/LSCDE/mesch12b/matrix2.h
 lscde.h
+/root/githubProject/LSCDE/lscde.h
+
 /root/githubProject/LSCDE/lscde.h
 
 /root/githubProject/LSCDE/matrix.h

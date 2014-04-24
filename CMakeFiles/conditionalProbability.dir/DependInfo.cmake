@@ -4,12 +4,13 @@ SET(CMAKE_DEPENDS_LANGUAGES
   )
 # The set of files for implicit dependencies of each language:
 SET(CMAKE_DEPENDS_CHECK_C
-  "/root/githubProject/LSCDE/LSCDE.c" "/root/githubProject/LSCDE/CMakeFiles/conditionalProbability.dir/LSCDE.c.o"
+  "/root/githubProject/LSCDE/conditionalProbability.c" "/root/githubProject/LSCDE/CMakeFiles/conditionalProbability.dir/conditionalProbability.c.o"
   )
 SET(CMAKE_C_COMPILER_ID "Clang")
 
 # Targets to which this target links.
 SET(CMAKE_TARGET_LINKED_INFO_FILES
+  "/root/githubProject/LSCDE/CMakeFiles/lscde.dir/DependInfo.cmake"
   )
 
 # The include file search paths:

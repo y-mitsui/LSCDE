@@ -6,7 +6,7 @@
 
 #IncludeRegexTransform: 
 
-/root/githubProject/LSCDE/LSCDE.c
+/root/githubProject/LSCDE/lscde.c
 stdio.h
 -
 stdlib.h

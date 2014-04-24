@@ -168,7 +168,7 @@ LSCDE_BINARY_DIR:STATIC=/root/githubProject/LSCDE
 LSCDE_SOURCE_DIR:STATIC=/root/githubProject/LSCDE
 
 //Missing description
-lscde_LIB_DEPENDS:STATIC=
+lscde_LIB_DEPENDS:STATIC=general;m;general;meschach;
 
 
 ########################

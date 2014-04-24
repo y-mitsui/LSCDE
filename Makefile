@@ -168,32 +168,53 @@ lscde/fast:
 	$(MAKE) -f CMakeFiles/lscde.dir/build.make CMakeFiles/lscde.dir/build
 .PHONY : lscde/fast
 
-LSCDE.o: LSCDE.c.o
-.PHONY : LSCDE.o
+conditionalProbability.o: conditionalProbability.c.o
+.PHONY : conditionalProbability.o
 
 # target to build an object file
-LSCDE.c.o:
-	$(MAKE) -f CMakeFiles/conditionalProbability.dir/build.make CMakeFiles/conditionalProbability.dir/LSCDE.c.o
-	$(MAKE) -f CMakeFiles/lscde.dir/build.make CMakeFiles/lscde.dir/LSCDE.c.o
-.PHONY : LSCDE.c.o
+conditionalProbability.c.o:
+	$(MAKE) -f CMakeFiles/conditionalProbability.dir/build.make CMakeFiles/conditionalProbability.dir/conditionalProbability.c.o
+.PHONY : conditionalProbability.c.o
 
-LSCDE.i: LSCDE.c.i
-.PHONY : LSCDE.i
+conditionalProbability.i: conditionalProbability.c.i
+.PHONY : conditionalProbability.i
 
 # target to preprocess a source file
-LSCDE.c.i:
-	$(MAKE) -f CMakeFiles/conditionalProbability.dir/build.make CMakeFiles/conditionalProbability.dir/LSCDE.c.i
-	$(MAKE) -f CMakeFiles/lscde.dir/build.make CMakeFiles/lscde.dir/LSCDE.c.i
-.PHONY : LSCDE.c.i
+conditionalProbability.c.i:
+	$(MAKE) -f CMakeFiles/conditionalProbability.dir/build.make CMakeFiles/conditionalProbability.dir/conditionalProbability.c.i
+.PHONY : conditionalProbability.c.i
 
-LSCDE.s: LSCDE.c.s
-.PHONY : LSCDE.s
+conditionalProbability.s: conditionalProbability.c.s
+.PHONY : conditionalProbability.s
 
 # target to generate assembly for a file
-LSCDE.c.s:
-	$(MAKE) -f CMakeFiles/conditionalProbability.dir/build.make CMakeFiles/conditionalProbability.dir/LSCDE.c.s
-	$(MAKE) -f CMakeFiles/lscde.dir/build.make CMakeFiles/lscde.dir/LSCDE.c.s
-.PHONY : LSCDE.c.s
+conditionalProbability.c.s:
+	$(MAKE) -f CMakeFiles/conditionalProbability.dir/build.make CMakeFiles/conditionalProbability.dir/conditionalProbability.c.s
+.PHONY : conditionalProbability.c.s
+
+lscde.o: lscde.c.o
+.PHONY : lscde.o
+
+# target to build an object file
+lscde.c.o:
+	$(MAKE) -f CMakeFiles/lscde.dir/build.make CMakeFiles/lscde.dir/lscde.c.o
+.PHONY : lscde.c.o
+
+lscde.i: lscde.c.i
+.PHONY : lscde.i
+
+# target to preprocess a source file
+lscde.c.i:
+	$(MAKE) -f CMakeFiles/lscde.dir/build.make CMakeFiles/lscde.dir/lscde.c.i
+.PHONY : lscde.c.i
+
+lscde.s: lscde.c.s
+.PHONY : lscde.s
+
+# target to generate assembly for a file
+lscde.c.s:
+	$(MAKE) -f CMakeFiles/lscde.dir/build.make CMakeFiles/lscde.dir/lscde.c.s
+.PHONY : lscde.c.s
 
 # Help Target
 help:
@@ -209,9 +230,12 @@ help:
 	@echo "... list_install_components"
 	@echo "... lscde"
 	@echo "... rebuild_cache"
-	@echo "... LSCDE.o"
-	@echo "... LSCDE.i"
-	@echo "... LSCDE.s"
+	@echo "... conditionalProbability.o"
+	@echo "... conditionalProbability.i"
+	@echo "... conditionalProbability.s"
+	@echo "... lscde.o"
+	@echo "... lscde.i"
+	@echo "... lscde.s"
 .PHONY : help
 
 
