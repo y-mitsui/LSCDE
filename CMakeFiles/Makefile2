@@ -38,22 +38,19 @@ cmake_force:
 SHELL = /bin/sh
 
 # The CMake executable.
-CMAKE_COMMAND = /usr/local/bin/cmake
+CMAKE_COMMAND = /usr/bin/cmake
 
 # The command to remove a file.
-RM = /usr/local/bin/cmake -E remove -f
+RM = /usr/bin/cmake -E remove -f
 
 # Escaping for special characters.
 EQUALS = =
 
-# The program to use to edit the cache.
-CMAKE_EDIT_COMMAND = /usr/local/bin/ccmake
-
 # The top-level source directory on which CMake was run.
-CMAKE_SOURCE_DIR = /root/githubProject/LSCDE
+CMAKE_SOURCE_DIR = /home/yosuke/workspace/LSCDE
 
 # The top-level build directory on which CMake was run.
-CMAKE_BINARY_DIR = /root/githubProject/LSCDE
+CMAKE_BINARY_DIR = /home/yosuke/workspace/LSCDE
 
 #=============================================================================
 # Target rules for target CMakeFiles/conditionalProbability.dir
@@ -62,7 +59,7 @@ CMAKE_BINARY_DIR = /root/githubProject/LSCDE
 CMakeFiles/conditionalProbability.dir/all: CMakeFiles/lscde.dir/all
 	$(MAKE) -f CMakeFiles/conditionalProbability.dir/build.make CMakeFiles/conditionalProbability.dir/depend
 	$(MAKE) -f CMakeFiles/conditionalProbability.dir/build.make CMakeFiles/conditionalProbability.dir/build
-	$(CMAKE_COMMAND) -E cmake_progress_report /root/githubProject/LSCDE/CMakeFiles  1
+	$(CMAKE_COMMAND) -E cmake_progress_report /home/yosuke/workspace/LSCDE/CMakeFiles  1
 	@echo "Built target conditionalProbability"
 .PHONY : CMakeFiles/conditionalProbability.dir/all
 
@@ -72,9 +69,9 @@ all: CMakeFiles/conditionalProbability.dir/all
 
 # Build rule for subdir invocation for target.
 CMakeFiles/conditionalProbability.dir/rule: cmake_check_build_system
-	$(CMAKE_COMMAND) -E cmake_progress_start /root/githubProject/LSCDE/CMakeFiles 2
+	$(CMAKE_COMMAND) -E cmake_progress_start /home/yosuke/workspace/LSCDE/CMakeFiles 2
 	$(MAKE) -f CMakeFiles/Makefile2 CMakeFiles/conditionalProbability.dir/all
-	$(CMAKE_COMMAND) -E cmake_progress_start /root/githubProject/LSCDE/CMakeFiles 0
+	$(CMAKE_COMMAND) -E cmake_progress_start /home/yosuke/workspace/LSCDE/CMakeFiles 0
 .PHONY : CMakeFiles/conditionalProbability.dir/rule
 
 # Convenience name for target.
@@ -97,7 +94,7 @@ clean: CMakeFiles/conditionalProbability.dir/clean
 CMakeFiles/lscde.dir/all:
 	$(MAKE) -f CMakeFiles/lscde.dir/build.make CMakeFiles/lscde.dir/depend
 	$(MAKE) -f CMakeFiles/lscde.dir/build.make CMakeFiles/lscde.dir/build
-	$(CMAKE_COMMAND) -E cmake_progress_report /root/githubProject/LSCDE/CMakeFiles  2
+	$(CMAKE_COMMAND) -E cmake_progress_report /home/yosuke/workspace/LSCDE/CMakeFiles  2
 	@echo "Built target lscde"
 .PHONY : CMakeFiles/lscde.dir/all
 
@@ -107,9 +104,9 @@ all: CMakeFiles/lscde.dir/all
 
 # Build rule for subdir invocation for target.
 CMakeFiles/lscde.dir/rule: cmake_check_build_system
-	$(CMAKE_COMMAND) -E cmake_progress_start /root/githubProject/LSCDE/CMakeFiles 1
+	$(CMAKE_COMMAND) -E cmake_progress_start /home/yosuke/workspace/LSCDE/CMakeFiles 1
 	$(MAKE) -f CMakeFiles/Makefile2 CMakeFiles/lscde.dir/all
-	$(CMAKE_COMMAND) -E cmake_progress_start /root/githubProject/LSCDE/CMakeFiles 0
+	$(CMAKE_COMMAND) -E cmake_progress_start /home/yosuke/workspace/LSCDE/CMakeFiles 0
 .PHONY : CMakeFiles/lscde.dir/rule
 
 # Convenience name for target.

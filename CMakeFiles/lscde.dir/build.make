@@ -26,22 +26,19 @@ cmake_force:
 SHELL = /bin/sh
 
 # The CMake executable.
-CMAKE_COMMAND = /usr/local/bin/cmake
+CMAKE_COMMAND = /usr/bin/cmake
 
 # The command to remove a file.
-RM = /usr/local/bin/cmake -E remove -f
+RM = /usr/bin/cmake -E remove -f
 
 # Escaping for special characters.
 EQUALS = =
 
-# The program to use to edit the cache.
-CMAKE_EDIT_COMMAND = /usr/local/bin/ccmake
-
 # The top-level source directory on which CMake was run.
-CMAKE_SOURCE_DIR = /root/githubProject/LSCDE
+CMAKE_SOURCE_DIR = /home/yosuke/workspace/LSCDE
 
 # The top-level build directory on which CMake was run.
-CMAKE_BINARY_DIR = /root/githubProject/LSCDE
+CMAKE_BINARY_DIR = /home/yosuke/workspace/LSCDE
 
 # Include any dependencies generated for this target.
 include CMakeFiles/lscde.dir/depend.make
@@ -54,17 +51,17 @@ include CMakeFiles/lscde.dir/flags.make
 
 CMakeFiles/lscde.dir/lscde.c.o: CMakeFiles/lscde.dir/flags.make
 CMakeFiles/lscde.dir/lscde.c.o: lscde.c
-	$(CMAKE_COMMAND) -E cmake_progress_report /root/githubProject/LSCDE/CMakeFiles $(CMAKE_PROGRESS_1)
+	$(CMAKE_COMMAND) -E cmake_progress_report /home/yosuke/workspace/LSCDE/CMakeFiles $(CMAKE_PROGRESS_1)
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Building C object CMakeFiles/lscde.dir/lscde.c.o"
-	/usr/bin/cc  $(C_DEFINES) $(C_FLAGS) -o CMakeFiles/lscde.dir/lscde.c.o   -c /root/githubProject/LSCDE/lscde.c
+	/usr/bin/cc  $(C_DEFINES) $(C_FLAGS) -o CMakeFiles/lscde.dir/lscde.c.o   -c /home/yosuke/workspace/LSCDE/lscde.c
 
 CMakeFiles/lscde.dir/lscde.c.i: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing C source to CMakeFiles/lscde.dir/lscde.c.i"
-	/usr/bin/cc  $(C_DEFINES) $(C_FLAGS) -E /root/githubProject/LSCDE/lscde.c > CMakeFiles/lscde.dir/lscde.c.i
+	/usr/bin/cc  $(C_DEFINES) $(C_FLAGS) -E /home/yosuke/workspace/LSCDE/lscde.c > CMakeFiles/lscde.dir/lscde.c.i
 
 CMakeFiles/lscde.dir/lscde.c.s: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling C source to assembly CMakeFiles/lscde.dir/lscde.c.s"
-	/usr/bin/cc  $(C_DEFINES) $(C_FLAGS) -S /root/githubProject/LSCDE/lscde.c -o CMakeFiles/lscde.dir/lscde.c.s
+	/usr/bin/cc  $(C_DEFINES) $(C_FLAGS) -S /home/yosuke/workspace/LSCDE/lscde.c -o CMakeFiles/lscde.dir/lscde.c.s
 
 CMakeFiles/lscde.dir/lscde.c.o.requires:
 .PHONY : CMakeFiles/lscde.dir/lscde.c.o.requires
@@ -101,6 +98,6 @@ CMakeFiles/lscde.dir/clean:
 .PHONY : CMakeFiles/lscde.dir/clean
 
 CMakeFiles/lscde.dir/depend:
-	cd /root/githubProject/LSCDE && $(CMAKE_COMMAND) -E cmake_depends "Unix Makefiles" /root/githubProject/LSCDE /root/githubProject/LSCDE /root/githubProject/LSCDE /root/githubProject/LSCDE /root/githubProject/LSCDE/CMakeFiles/lscde.dir/DependInfo.cmake --color=$(COLOR)
+	cd /home/yosuke/workspace/LSCDE && $(CMAKE_COMMAND) -E cmake_depends "Unix Makefiles" /home/yosuke/workspace/LSCDE /home/yosuke/workspace/LSCDE /home/yosuke/workspace/LSCDE /home/yosuke/workspace/LSCDE /home/yosuke/workspace/LSCDE/CMakeFiles/lscde.dir/DependInfo.cmake --color=$(COLOR)
 .PHONY : CMakeFiles/lscde.dir/depend
 

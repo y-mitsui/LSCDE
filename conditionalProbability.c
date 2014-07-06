@@ -10,8 +10,8 @@
 #define Calloc(type,n) (type *)calloc(1,(n)*sizeof(type))
 
 #define NUM_NODE 2
-#define NUM_SAMPLE 500
-#define NUM_TEST 11
+#define NUM_SAMPLE 900
+#define NUM_TEST 900
 
 void setSample(double *xSample,double *ySample,int numSample){
 	int i;
@@ -33,7 +33,7 @@ int main(void){
 	char buf[1024];
 	int i;
 
-	if(!(fp=fopen("normalX.csv","r"))){
+	if(!(fp=fopen("../LSCDE_matlab/normalX.csv","r"))){
 		perror("normalX.csv");
 		return 1;
 	}
@@ -44,7 +44,7 @@ int main(void){
 	}
 	fclose(fp);
 
-	if(!(fp=fopen("normalY.csv","r"))){
+	if(!(fp=fopen("../LSCDE_matlab/normalY.csv","r"))){
 		perror("normalY.csv");
 		return 1;
 	}
@@ -57,7 +57,7 @@ int main(void){
 
 	lscde *ctx=lscdeModel(xSample,ySample,1,1,i);
 
-	if(!(fp=fopen("testX.csv","r"))){
+	if(!(fp=fopen("../LSCDE_matlab/testX.csv","r"))){
 		perror("testX.csv");
 		return 1;
 	}
@@ -68,7 +68,7 @@ int main(void){
 	}
 	fclose(fp);
 
-	if(!(fp=fopen("testY.csv","r"))){
+	if(!(fp=fopen("../LSCDE_matlab/testY.csv","r"))){
 		perror("testY.csv");
 		return 1;
 	}
@@ -79,8 +79,15 @@ int main(void){
 	}
 	fclose(fp);
 
-	lscdeConditionalDensity(ctx,xTest,yTest,i);
-
+	MAT *r=lscdeConditionalDensity(ctx,xTest,yTest,i);
+	int j;
+	fp=fopen("../LSCDE_matlab/result2.csv","w");
+	for(i=0;i<r->m;i++){
+		for(j=0;j<r->n;j++){
+			fprintf(fp,"%lf\n",r->me[i][j]);
+		}
+	}
+	//printMatrix(r,"r");
 	free(xSample);
 	free(ySample);
 	free(xTest);
