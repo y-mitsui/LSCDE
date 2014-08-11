@@ -2,7 +2,7 @@ cmake_minimum_required (VERSION 2.6)
 
 project (LSCDE)
 
-SET(CMAKE_C_FLAGS "-Wall -g")
+SET(CMAKE_C_FLAGS "-Wall -g -O0")
 
 ADD_LIBRARY(lscde STATIC lscde.c)
 target_link_libraries(lscde m meschach)

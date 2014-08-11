@@ -94,6 +94,77 @@ double *logspace(double from,double to,int num){
 
 	return r;
 }
+MAT *makeLearning(double sigma,double lambda,int b,int numSample){
+	int i,j;
+	MAT *phi_xu=m_get(b,numSample);
+	MAT *tmpB=sm_mlt(1.0/(2.0*sigma*sigma),xu_dist2,NULL);
+	for(i=0;i<b;i++){
+		for(j=0;j<numSample;j++){
+			phi_xu->me[i][j]=exp(-tmpB->me[i][j]);
+		}
+	}
+
+	MAT *phi_yv=m_get(b,numSample);
+	MAT *tmpC=sm_mlt(1.0/(2.0*sigma*sigma),yv_dist2,NULL);
+	for(i=0;i<b;i++){
+		for(j=0;j<numSample;j++){
+			phi_yv->me[i][j]=exp(-tmpC->me[i][j]);
+		}
+	}
+
+	MAT *phi_zw=m_get(b,numSample);
+	for(i=0;i<b;i++){
+		for(j=0;j<numSample;j++){
+			phi_zw->me[i][j]=phi_xu->me[i][j]*phi_yv->me[i][j];
+		}
+	}
+
+	MAT *phi_vv=m_get(b,b);
+	MAT *tmpD=sm_mlt(1.0/(4.0*sigma*sigma),vv_dist2,NULL);
+	for(i=0;i<b;i++){
+		for(j=0;j<b;j++){
+			phi_vv->me[i][j]=exp(-tmpD->me[i][j]);
+		}
+	}
+	MAT *sum=m_get(b,b);
+	m_zero(sum);
+	for(i=0;i<fold;i++){
+		if(i!=k){
+			m_add(sum,Phibar_cv[i],sum);
+		}
+	}
+	int total=0;
+	for(l=0;l<numSample;l++){
+		if(cv_split[l]!=k){
+			total++;
+		}
+	}
+	MAT *matA=sm_mlt(1.0/(double)total,sum,NULL);
+	MAT *matB=m_get(b,b);
+	m_ident(matB);
+	MAT *matC=sm_mlt(flambda,matB,NULL);
+	MAT *matD=m_add(matA,matC,NULL);
+	MAT *matE=m_get(b,total);
+	int me=0;
+	for(l=0;l<numSample;l++){
+		if(cv_split[l]!=k){
+			for(m=0;m<b;m++){
+				matE->me[m][me]=phi_zw->me[m][cv_index[l]];
+			}
+			me++;
+		}
+	}
+	MAT *matF=m_get(b,1);
+	for(m=0;m<b;m++){
+		double mean=0.0;
+		for(l=0;l<total;l++){
+			mean+=matE->me[m][l];
+		}
+		mean/=numSample;
+		matF->me[m][0]=mean;
+	}
+	return mylinsolve(matD,matF);
+}
 lscde* lscdeModel(double *xTrain,double *yTrain,int xDim,int yDim,int numSample){
 
 	int b=(numSample < 100) ? numSample : 100;
@@ -223,8 +294,7 @@ lscde* lscdeModel(double *xTrain,double *yTrain,int xDim,int yDim,int numSample)
 		}
 		for(j=0;j<9;j++){
 			lambda=lambda_list[j];
-			MAT *score_tmp=m_get(1,fold);
-			m_zero(score_tmp);
+			double score_tmp=0.0;
 			for(k=0;k<fold;k++){
 				MAT *sum=m_get(b,b);
 				m_zero(sum);
@@ -268,6 +338,7 @@ lscde* lscdeModel(double *xTrain,double *yTrain,int xDim,int yDim,int numSample)
 						alphat->me[i][0]=(alphat->me[i][0] < 0 ) ? 0: alphat->me[i][0];
 				}
 				MAT *tmp=m_get(phi_xu->m,numSample/fold+1);
+
 				for(k=0;k<phi_xu->m;k++){
 					int tmpCt=0;
 					for(l=0;l<phi_xu->n;l++){
@@ -276,24 +347,50 @@ lscde* lscdeModel(double *xTrain,double *yTrain,int xDim,int yDim,int numSample)
 						}
 					}
 				}
-				MAT *tmp2=m_mlt(sm_mlt(pow(sqrt(2*M_PI)*sigma,yDim),m_transp(alphat,NULL),NULL),tmp,NULL);
-				/*normalization_cv=max(cc,(sqrt(2*pi)*sigma)^d_y*alphah_cv'*phi_xu(:,cv_index(cv_split==k)));
-				ph_cv=alphah_cv'*phi_zw(:,cv_index(cv_split==k))./normalization_cv;*/
+				MAT *normalization_cv=m_mlt(sm_mlt(pow(sqrt(2*M_PI)*sigma,yDim),m_transp(alphat,NULL),NULL),tmp,NULL);
+				MAT *matG=m_get(b,numSample-total);
+				me=0;
+				for(l=0;l<numSample;l++){
+					if(cv_split[l]==k){
+						for(m=0;m<b;m++){
+							matG->me[m][me]=phi_zw->me[m][cv_index[l]];
+						}
+						me++;
+					}
+				}
+				MAT *ph_cv=m_pixel(m_mlt(m_transp(alphat,NULL),matG,NULL),normalization_cv,NULL,'/');
+				for(l=0;l<ph_cv->m;l++){
+					for(m=0;m<ph_cv->n;m++){
+						ph_cv->me[l][m]+=cc;
+					}
+				}
+				double mean=0.0;
+				for(l=0;l<ph_cv->m;l++){
+					for(m=0;m<ph_cv->n;m++){
+						mean+=log(ph_cv->me[l][m]);
+					}
+				}
+				mean/=ph_cv->n;
+				score_tmp+=-mean;
 
 			}
+			score_cv->me[i][j]=score_tmp/fold;
 		}
-		MAT *Phibar=sm_mlt(pow(sqrt(M_PI)*sigma,1),phi_vv,NULL);
+
+
+		/*MAT *Phibar=sm_mlt(pow(sqrt(M_PI)*sigma,1),phi_vv,NULL);
 		MAT *tmpE=m_mlt(phi_xu,m_transp(phi_xu,NULL),NULL);
 		for(i=0;i<b;i++){
 			for(j=0;j<b;j++){
 				Phibar->me[i][j]*=tmpE->me[i][j];
 			}
 		}
+
 		MAT *PhibarDived=sm_mlt(1.0/(double)numSample,Phibar,NULL);
 		double lambda=1.0000e-003;
 		MAT *ident=m_get(b,b);
 		MAT *tmpF=sm_mlt(lambda,m_ident(ident),NULL);
-		MAT *tmpG=m_add(tmpF,PhibarDived,NULL);
+		MAT *tmpG=m_add(tmpF,PhibarDived,NULL);*/
 
 
 		/*for(j=0;j<fold;j++){
@@ -312,7 +409,7 @@ lscde* lscdeModel(double *xTrain,double *yTrain,int xDim,int yDim,int numSample)
 		      Phibar_cv(:,:,k)=(sqrt(pi)*sigma)^d_y*phi_vv.*(tmp*tmp');
 		end % for fold*/
 
-		MAT *phi_zwMean=m_get(b,1);
+		/*MAT *phi_zwMean=m_get(b,1);
 		for(i=0;i<b;i++){
 			double sTmp=0.0;
 			for(j=0;j<numSample;j++){
@@ -323,7 +420,7 @@ lscde* lscdeModel(double *xTrain,double *yTrain,int xDim,int yDim,int numSample)
 		alphat=mylinsolve(tmpG,phi_zwMean);
 		for(i=0;i<b;i++){
 			alphat->me[i][0]=(alphat->me[i][0] < 0 ) ? 0: alphat->me[i][0];
-		}
+		}*/
 
 		m_free(phi_xu);
 		m_free(tmpB);
@@ -331,13 +428,38 @@ lscde* lscdeModel(double *xTrain,double *yTrain,int xDim,int yDim,int numSample)
 		m_free(tmpC);
 		m_free(phi_vv);
 		m_free(tmpD);
-		m_free(Phibar);
+		/*m_free(Phibar);
 		m_free(tmpE);
 		m_free(PhibarDived);
 		m_free(tmpF);
 		m_free(tmpG);
-		m_free(phi_zwMean);
+		m_free(phi_zwMean);*/
 	}
+	int *idx=Malloc(int,score_cv->m);
+	double *min=Malloc(double,score_cv->m);
+	for(i=0;i<score_cv->m;i++){
+		min[i]=999999.0;
+		for(j=0;j<score_cv->n;j++){
+			if(min[i] > score_cv->me[i][j]){
+				idx[i]=j;
+				min[i]=score_cv->me[i][j];
+			}
+		}
+	}
+	double sigma_min=9999.0;
+	int sigma_index=0;
+	for(i=0;i<score_cv->m;i++){
+		if(sigma_min > min[i]){
+			sigma_index=i;
+			sigma_min=min[i];
+		}
+	}
+	double fsigma=sigma_list[sigma_index];
+	double flambda=lambda_list[idx[sigma_index]];
+
+			
+
+	printMatrix(alphat,"alphat");
 	lscde *model=Malloc(lscde,1);
 	model->coefficient=alphat;
 	model->xCenters=xCenters;
