@@ -1,2 +1,2 @@
-/usr/bin/ar cr liblscde.a  CMakeFiles/lscde.dir/lscde.c.o
+/usr/bin/ar cr liblscde.a  CMakeFiles/lscde.dir/lscde.c.o CMakeFiles/lscde.dir/matWrapper.c.o CMakeFiles/lscde.dir/common.c.o
 /usr/bin/ranlib liblscde.a

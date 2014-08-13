@@ -72,14 +72,64 @@ CMakeFiles/lscde.dir/lscde.c.o.provides: CMakeFiles/lscde.dir/lscde.c.o.requires
 
 CMakeFiles/lscde.dir/lscde.c.o.provides.build: CMakeFiles/lscde.dir/lscde.c.o
 
+CMakeFiles/lscde.dir/matWrapper.c.o: CMakeFiles/lscde.dir/flags.make
+CMakeFiles/lscde.dir/matWrapper.c.o: matWrapper.c
+	$(CMAKE_COMMAND) -E cmake_progress_report /home/yosuke/workspace/LSCDE/CMakeFiles $(CMAKE_PROGRESS_2)
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Building C object CMakeFiles/lscde.dir/matWrapper.c.o"
+	/usr/bin/cc  $(C_DEFINES) $(C_FLAGS) -o CMakeFiles/lscde.dir/matWrapper.c.o   -c /home/yosuke/workspace/LSCDE/matWrapper.c
+
+CMakeFiles/lscde.dir/matWrapper.c.i: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing C source to CMakeFiles/lscde.dir/matWrapper.c.i"
+	/usr/bin/cc  $(C_DEFINES) $(C_FLAGS) -E /home/yosuke/workspace/LSCDE/matWrapper.c > CMakeFiles/lscde.dir/matWrapper.c.i
+
+CMakeFiles/lscde.dir/matWrapper.c.s: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling C source to assembly CMakeFiles/lscde.dir/matWrapper.c.s"
+	/usr/bin/cc  $(C_DEFINES) $(C_FLAGS) -S /home/yosuke/workspace/LSCDE/matWrapper.c -o CMakeFiles/lscde.dir/matWrapper.c.s
+
+CMakeFiles/lscde.dir/matWrapper.c.o.requires:
+.PHONY : CMakeFiles/lscde.dir/matWrapper.c.o.requires
+
+CMakeFiles/lscde.dir/matWrapper.c.o.provides: CMakeFiles/lscde.dir/matWrapper.c.o.requires
+	$(MAKE) -f CMakeFiles/lscde.dir/build.make CMakeFiles/lscde.dir/matWrapper.c.o.provides.build
+.PHONY : CMakeFiles/lscde.dir/matWrapper.c.o.provides
+
+CMakeFiles/lscde.dir/matWrapper.c.o.provides.build: CMakeFiles/lscde.dir/matWrapper.c.o
+
+CMakeFiles/lscde.dir/common.c.o: CMakeFiles/lscde.dir/flags.make
+CMakeFiles/lscde.dir/common.c.o: common.c
+	$(CMAKE_COMMAND) -E cmake_progress_report /home/yosuke/workspace/LSCDE/CMakeFiles $(CMAKE_PROGRESS_3)
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Building C object CMakeFiles/lscde.dir/common.c.o"
+	/usr/bin/cc  $(C_DEFINES) $(C_FLAGS) -o CMakeFiles/lscde.dir/common.c.o   -c /home/yosuke/workspace/LSCDE/common.c
+
+CMakeFiles/lscde.dir/common.c.i: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing C source to CMakeFiles/lscde.dir/common.c.i"
+	/usr/bin/cc  $(C_DEFINES) $(C_FLAGS) -E /home/yosuke/workspace/LSCDE/common.c > CMakeFiles/lscde.dir/common.c.i
+
+CMakeFiles/lscde.dir/common.c.s: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling C source to assembly CMakeFiles/lscde.dir/common.c.s"
+	/usr/bin/cc  $(C_DEFINES) $(C_FLAGS) -S /home/yosuke/workspace/LSCDE/common.c -o CMakeFiles/lscde.dir/common.c.s
+
+CMakeFiles/lscde.dir/common.c.o.requires:
+.PHONY : CMakeFiles/lscde.dir/common.c.o.requires
+
+CMakeFiles/lscde.dir/common.c.o.provides: CMakeFiles/lscde.dir/common.c.o.requires
+	$(MAKE) -f CMakeFiles/lscde.dir/build.make CMakeFiles/lscde.dir/common.c.o.provides.build
+.PHONY : CMakeFiles/lscde.dir/common.c.o.provides
+
+CMakeFiles/lscde.dir/common.c.o.provides.build: CMakeFiles/lscde.dir/common.c.o
+
 # Object files for target lscde
 lscde_OBJECTS = \
-"CMakeFiles/lscde.dir/lscde.c.o"
+"CMakeFiles/lscde.dir/lscde.c.o" \
+"CMakeFiles/lscde.dir/matWrapper.c.o" \
+"CMakeFiles/lscde.dir/common.c.o"
 
 # External object files for target lscde
 lscde_EXTERNAL_OBJECTS =
 
 liblscde.a: CMakeFiles/lscde.dir/lscde.c.o
+liblscde.a: CMakeFiles/lscde.dir/matWrapper.c.o
+liblscde.a: CMakeFiles/lscde.dir/common.c.o
 liblscde.a: CMakeFiles/lscde.dir/build.make
 liblscde.a: CMakeFiles/lscde.dir/link.txt
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --red --bold "Linking C static library liblscde.a"
@@ -91,6 +141,8 @@ CMakeFiles/lscde.dir/build: liblscde.a
 .PHONY : CMakeFiles/lscde.dir/build
 
 CMakeFiles/lscde.dir/requires: CMakeFiles/lscde.dir/lscde.c.o.requires
+CMakeFiles/lscde.dir/requires: CMakeFiles/lscde.dir/matWrapper.c.o.requires
+CMakeFiles/lscde.dir/requires: CMakeFiles/lscde.dir/common.c.o.requires
 .PHONY : CMakeFiles/lscde.dir/requires
 
 CMakeFiles/lscde.dir/clean:

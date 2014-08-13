@@ -165,6 +165,30 @@ lscde/fast:
 	$(MAKE) -f CMakeFiles/lscde.dir/build.make CMakeFiles/lscde.dir/build
 .PHONY : lscde/fast
 
+common.o: common.c.o
+.PHONY : common.o
+
+# target to build an object file
+common.c.o:
+	$(MAKE) -f CMakeFiles/lscde.dir/build.make CMakeFiles/lscde.dir/common.c.o
+.PHONY : common.c.o
+
+common.i: common.c.i
+.PHONY : common.i
+
+# target to preprocess a source file
+common.c.i:
+	$(MAKE) -f CMakeFiles/lscde.dir/build.make CMakeFiles/lscde.dir/common.c.i
+.PHONY : common.c.i
+
+common.s: common.c.s
+.PHONY : common.s
+
+# target to generate assembly for a file
+common.c.s:
+	$(MAKE) -f CMakeFiles/lscde.dir/build.make CMakeFiles/lscde.dir/common.c.s
+.PHONY : common.c.s
+
 conditionalProbability.o: conditionalProbability.c.o
 .PHONY : conditionalProbability.o
 
@@ -213,6 +237,30 @@ lscde.c.s:
 	$(MAKE) -f CMakeFiles/lscde.dir/build.make CMakeFiles/lscde.dir/lscde.c.s
 .PHONY : lscde.c.s
 
+matWrapper.o: matWrapper.c.o
+.PHONY : matWrapper.o
+
+# target to build an object file
+matWrapper.c.o:
+	$(MAKE) -f CMakeFiles/lscde.dir/build.make CMakeFiles/lscde.dir/matWrapper.c.o
+.PHONY : matWrapper.c.o
+
+matWrapper.i: matWrapper.c.i
+.PHONY : matWrapper.i
+
+# target to preprocess a source file
+matWrapper.c.i:
+	$(MAKE) -f CMakeFiles/lscde.dir/build.make CMakeFiles/lscde.dir/matWrapper.c.i
+.PHONY : matWrapper.c.i
+
+matWrapper.s: matWrapper.c.s
+.PHONY : matWrapper.s
+
+# target to generate assembly for a file
+matWrapper.c.s:
+	$(MAKE) -f CMakeFiles/lscde.dir/build.make CMakeFiles/lscde.dir/matWrapper.c.s
+.PHONY : matWrapper.c.s
+
 # Help Target
 help:
 	@echo "The following are some of the valid targets for this Makefile:"
@@ -227,12 +275,18 @@ help:
 	@echo "... list_install_components"
 	@echo "... lscde"
 	@echo "... rebuild_cache"
+	@echo "... common.o"
+	@echo "... common.i"
+	@echo "... common.s"
 	@echo "... conditionalProbability.o"
 	@echo "... conditionalProbability.i"
 	@echo "... conditionalProbability.s"
 	@echo "... lscde.o"
 	@echo "... lscde.i"
 	@echo "... lscde.s"
+	@echo "... matWrapper.o"
+	@echo "... matWrapper.i"
+	@echo "... matWrapper.s"
 .PHONY : help
 
 

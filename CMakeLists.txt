@@ -4,7 +4,7 @@ project (LSCDE)
 
 SET(CMAKE_C_FLAGS "-Wall -g -O0")
 
-ADD_LIBRARY(lscde STATIC lscde.c)
+ADD_LIBRARY(lscde STATIC lscde.c matWrapper.c common.c)
 target_link_libraries(lscde m meschach)
 
 add_executable (conditionalProbability conditionalProbability.c)

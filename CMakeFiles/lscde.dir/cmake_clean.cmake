@@ -1,5 +1,7 @@
 FILE(REMOVE_RECURSE
   "CMakeFiles/lscde.dir/lscde.c.o"
+  "CMakeFiles/lscde.dir/matWrapper.c.o"
+  "CMakeFiles/lscde.dir/common.c.o"
   "liblscde.pdb"
   "liblscde.a"
 )
